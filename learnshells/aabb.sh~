@@ -1,4 +1,0 @@
-#echo -e 处理特殊字符
-
-
-echo -e "a\bbb"

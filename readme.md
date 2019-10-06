@@ -1,1 +1,1 @@
-# learn shells, QT,linux etc.
+# learn shells, lisp & linux etc.
