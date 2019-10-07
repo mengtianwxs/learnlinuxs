@@ -11,7 +11,7 @@ find . -type f -empty 找出当前目录下的所有空文件
 find . -type d -empty 找出当前目录下所有空目录
 find . -type f -name ".*" 找出当前目录下所有的隐藏文件
 find . -user root 找出当前目录下所有者是root的文件或目录
-find . group root 找出当前目录下用户组是root 的文件或目录
+find . -group root 找出当前目录下用户组是root 的文件或目录
 find . -type f -mtime 3 找出当前目录下3天前修改的所有文件
 find . -type f -mtime +30 找出当前目录下30天前修改的所有文件
 find . -type f -mtime -3 找出当前目录下3天以内修改的所有文件
