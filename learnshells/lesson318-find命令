@@ -7,6 +7,7 @@ find . -type f -perm 0777 找出当前目录下文件权限是777的所有文件
 find . -type f ! -perm 777 找出当前目录下文件权限不是777的所有文件
 find . -name "a*ff" -exec rm -r {} \;  此命令用来删除当前目录下所有a*ff的文件
 其中{} \;表示把查找的结果发送到此来
+{}表示find到的结果传给-exec参数而使用-exec参数必须用分号;结尾\是用来转义的
 find . -type f -empty 找出当前目录下的所有空文件
 find . -type d -empty 找出当前目录下所有空目录
 find . -type f -name ".*" 找出当前目录下所有的隐藏文件
