@@ -16,3 +16,8 @@ find . -group root 找出当前目录下用户组是root 的文件或目录
 find . -type f -mtime 3 找出当前目录下3天前修改的所有文件
 find . -type f -mtime +30 找出当前目录下30天前修改的所有文件
 find . -type f -mtime -3 找出当前目录下3天以内修改的所有文件
+find . -type f -mtime +30 -mtime -60 找出当前目录下30天以前60天以内修改的所 有文件
+find . -type f -ctime -60 找出当前目录1小时内修改的文件
+find . -type f -size 50MB 找出当前目录大小是50MB的所有文件
+find . -type f -size +50MB -size -100MB 找出当前目录大于50小于100MB的文件
+find . -type f -size +10MB -exec rm -rf {} \; 找出当前目录大于10MB的文件并删除
