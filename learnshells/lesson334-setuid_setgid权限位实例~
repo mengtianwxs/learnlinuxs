@@ -1,0 +1,27 @@
+#设置用户和组权限位
+setuid(设置用户标识)是允许用户以文件所有者的权限执行一个程序的权限位.
+setgid(设置组标识)是允许用户以用户组成员的权限执行一个程序的权限位
+
+使用chmod命令可以设置setuid
+chmod u+s a1
+-rwSr--r-- 2 -- users 22 Oct 10 09:22 aa
+同时 可以用chmod g+s a1设置setgid
+-rwSr-Sr-- 2 -- users 22 Oct 10 09:22 a1
+
+chmod命令的数字模式设置setuid的方法是,在3个权限位前面加数字4
+
+chmod 4755 a1
+
+chmod命令数字模式setgid的方法 在3个权限位前面加数字2
+chmod 2755 a1
+
+使用chmod命令移除setuid和setgid权限位的方法是在3个权限位前面加数字0
+chmod 0755 a1
+
+或chmod u-s a1 chmod g-s a1
+
+
+
+
+
+

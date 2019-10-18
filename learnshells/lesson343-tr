@@ -1,0 +1,19 @@
+tr命令用于转换字符,删除字符和压缩重复的字符.它从标准输入读取数据并将结果输出到 标准输出.
+@1 tr命令的转换字符的 功能
+echo linuxshell | tr linuxshell LINUXSHELL
+LINUXSHELL
+echo linuxshell | tr [:lower:] [:upper:]
+LINUXSHELL
+以 上 把 上面小写字符转换成大写字符.
+echo linuxshell | tr a-z A-Z同上面一样效果
+
+@2 tr命令的转换一个文件中的内容并将转换结果输出到另一个文件
+cat bb
+{aa}
+tr '{}' '()' < bb > bb1
+~/d> ls
+a1  a2  aa  bb  bb1  #tt.c#
+cat bb1
+(aa)
+
+

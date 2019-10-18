@@ -1,0 +1,9 @@
+chown root test  把test文件的所用者改为root
+chown [option]... [owner]:[group] file
+chown :root test 把test文件的用户组也改成root
+chown mt:mt test 同时修改test文件的所有者用户组
+-R选项,chown命令可以递归修改目录下的文件及其子目录所有者和用户组
+信息
+
+chown -R mtest:users ~/d 修改d目录下所有文件和子目录的所有者和用户组信息.
+

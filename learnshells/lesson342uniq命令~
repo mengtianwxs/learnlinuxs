@@ -1,0 +1,11 @@
+uniq 命令用于移除或发现文件中重复的条目
+uniq aa 即可
+uniq -c aa
+      1 this is aa,10
+      1 this is tt,23
+      1 f is a,24
+      1 a is a,78
+      1 b is c,42
+      2 this
+使用 uniq -c 可以统计重复行出现的次数
+uniq -d 只显示文件中有重复行并只显示一次
