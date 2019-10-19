@@ -17,3 +17,14 @@ cat bb1
 (aa)
 
 
+echo "this is a file " |tr [:space:] 'x'
+thisxisxaxfilexx
+所有的空格都被替换为x字符
+
+tr命令删除指定字符
+tr -d
+echo "This is MT"| tr -d a-z
+T  MT
+把小写字母全部删除
+
+

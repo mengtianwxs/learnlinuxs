@@ -1,0 +1,45 @@
+diff 比较两个文件,并找出它们之间不同.
+diff f1 f2 简单比较两个文件
+1,3c1,3表示第一个文件的1-3行与第二个文件的1-3行内容上有差别
+"<"表示第一个文件的行
+">"表示第二个文件的行
+4a5,6表示第二个文件与第一个文件相比,在第4行后多了5,6两行内容.
+7,11c9,12 表示第一个文件的7-11行与第二个文件的9-12行在内容上有差别
+diff -w f1 f2 在比较两个文件时忽略这些空格
+diff -yw 可以并排的格式输出两个文件的比较结果
+diff -y f1 f2
+this is f2 file							this is f2 file
+i can do it							i can do it
+							      >	u can do it
+							      >	i see
+
+"|"表示内容有差异的行,
+">"表示第二个文件中多出的行
+"<" 表示第一个文件中多出的行
+diff -y f1 f2
+this is f1 file						      |	this is f2 file
+i can do it							i can do it
+							      >	u can do it
+							      >	i see
+diff -y -W 30 f1 f2
+this is f1 fi |	this is f2 fi
+i can do it	i can do it
+	      >	u can do it
+	      >	i see
+-W 选项指定并列输出格式的列宽,使每行内容可以完整显示
+diff -c 会以上下对比格式输出两个文件的比较结果
+diff -c f1 f2
+*** f1	2019-10-19 09:26:05.798118361 +0800
+--- f2	2019-10-19 09:16:31.858064836 +0800
+***************
+*** 1,2 ****
+! this is f1 file
+  i can do it
+--- 1,4 ----
+! this is f2 file
+  i can do it
++ u can do it
++ i see
+
+!表示两个文件中内容有差别的行
++ 表示第二个文件比第一个文件多出的行
