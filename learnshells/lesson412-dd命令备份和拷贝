@@ -1,0 +1,30 @@
+dd if=/dev/sda of=/dev/sdb
+if=<inputfile> 指定输入文件路径
+of=<outfile> 指定输出文件路径
+直接复制一个磁盘/dev/sda数据到另一个磁盘/dev/sdb
+dd if=/dev/sda of=/dev/sdb
+
+复制一个dvd光盘数据到一个iso文件
+dd if=/dev/dvd of=data.iso
+
+擦除一个分区的数据
+dd if=/dev/zero of=/dev/sda2
+
+/dev/zero 是一个特殊文件.从文件/dev/zero读出的内容均为空字符,提供用于初始化数据存储器的字符流.
+
+dd命令指定输入输出块大小.
+bs=<n> 指定输入和输出的块大小
+count=<n> 从输入读取块数量
+
+/dev/null 是linux系统中的一个特殊文件,就像一个黑洞,它可以接受所有向它写入的数据,而从这个文件中读不出任何数据.所有想过滤掉的输出数据都可以重定向到这个文件
+
+
+
+
+
+
+
+
+
+
+

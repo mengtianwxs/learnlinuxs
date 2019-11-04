@@ -1,0 +1,23 @@
+at命令用于安排一个任务在指定的时间运行.
+at noon 12点之前,表示今天12点运行,１２点之后表示在明天１２点运行
+at midnight　凌晨12点
+at teatime 下午4点
+at tomorrow　明天与当前时间相同的时间
+at noon tomorrow  明天的中午１２点
+at next week　一周后与当前时间相同的时间
+at next monday 下周一与当前时间相同的时间
+at 9:00 AM 上午９点与当前时间的关系同第一条
+at 2:30 PM 下午2点３０分.与当前时间的关系同第一条
+at  2:3０ PM tomorrow　明天下午２点３０分
+at now +30 minutes 当前时间３０分钟后
+at now + 1 hour 当前时间一小时后
+at now + ２ days 两天后与当前时间相同的时间
+
+
+######################
+at 5 am /sbin/reboot -f 早上５点重启系统,使用-f 选项at命令从指定的文件中读取命令内容,然后在指定的时间运行
+
+at -f mytest now +1 hour 在一小时后运行文件mytest中
+
+
+at -l 与atq命令相同　列出当前用户所有使用at命令创建的还未运行或当前正在运行的任务,如果是root账号,将列出所有用户的任务

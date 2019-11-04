@@ -1,0 +1,28 @@
+paste合并文件
+
+paste f1 f2
+this is f1 file	this is f2 file
+i can do it	i can do it
+	u can do it
+	i see
+
+paste -d 指定各个文件中的各行在合并时所使用的分隔符
+paste -d '|' f1 f2
+
+this is f1 file|this is f2 file
+i can do it|i can do it
+|u can do it
+|i see
+
+paste -d '#' f1 f2
+this is f1 file#this is f2 file
+i can do it#i can do it
+#u can do it
+#i see
+
+paste -d ":," f1 f2 f3 合并多个文件时可以指定多个分隔符
+
+paste - - < f1 把文件的内容由一列
+this is f1 file	i can do it
+paste -d- - -  < f1
+this is f1 file-i can do it
